@@ -1,0 +1,41 @@
+ALGORITHM algo_sentence
+VAR
+    sen_length, vowel, word:integer:=0;
+
+    letter:CHAR;
+    
+BEGIN
+
+    read(letter);
+
+    WHILE (letter<>".") DO
+
+        IF (letter<>"") THEN
+        
+            IF (letter="a" OR letter="e" OR letter="i" OR letter="o" OR letter="u" OR letter="y") THEN
+                
+                vowel:=vowel+1;
+
+                sen_length:=sen_length+1;
+
+
+            ELSE
+
+                sen_length:=sen_length+1;
+
+            END_IF
+        ELSE
+
+            sen_length:=sen_length+1;
+
+        END_IF
+
+        read(letter);
+
+    END_WHILE
+
+    write(sen_length);
+
+    write(vowel);
+
+END
